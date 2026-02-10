@@ -1,0 +1,38 @@
+# Yosys Synthesis Script for Calculator
+
+# Read the design
+read_verilog ../rtl/calculator.v
+
+# Set top module
+hierarchy -check -top calculator
+
+# Translate processes (always blocks) to netlists
+proc
+
+# Flatten the design
+flatten
+
+# Optimize the design
+opt
+
+# Technology mapping using generic library
+techmap
+
+# Optimize again after mapping
+opt
+
+# Clean up
+clean
+
+# Generate statistics
+stat
+
+# Write the synthesized netlist
+write_verilog -noattr synth_calculator.v
+
+# Write JSON format (for visualization)
+write_json synth_calculator.json
+
+# Print success message
+# Print success message
+log Synthesis complete! Check synth_calculator.v
