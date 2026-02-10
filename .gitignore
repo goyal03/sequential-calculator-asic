@@ -5,6 +5,7 @@ sim/*_sim
 sim/*_sim2
 sim/*.out
 
+!sim/.gitkeep
 # Synthesis outputs (keep source scripts)
 synthesis/synth_*.v
 synthesis/synth_*.json
