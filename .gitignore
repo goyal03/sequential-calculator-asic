@@ -2,6 +2,7 @@
 *.vcd
 *.vvp
 sim/*_sim
+sim/*_sim2
 sim/*.out
 
 # Synthesis outputs (keep source scripts)
